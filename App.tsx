@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ContentProvider } from './context/ContentContext';
 
 import { Hero } from './components/sections/Hero';
@@ -45,7 +45,7 @@ const LandingPage: React.FC = () => (
 const App: React.FC = () => {
   return (
     <ContentProvider>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           {/* Rota Pública (Landing Page) */}
           <Route path="/" element={<LandingPage />} />
@@ -53,7 +53,7 @@ const App: React.FC = () => {
           {/* Rota Privada (Painel Administrativo) */}
           <Route path="/admin" element={<Admin />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </ContentProvider>
   );
 };
