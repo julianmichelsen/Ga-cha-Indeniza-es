@@ -26,9 +26,6 @@
     fbq('init', '1426646388899981');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1426646388899981&ev=PageView&noscript=1"
-    /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- Google Analytics 4 (Placeholder) -->
@@ -73,18 +70,21 @@
   <script type="importmap">
 {
   "imports": {
-    "vite": "https://esm.sh/vite@^7.3.1",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
     "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
   }
 }
 </script>
 </head>
   <body class="bg-white text-gray-800 antialiased overflow-x-hidden">
+    <!-- Meta Pixel Code (Noscript obrigatório ficar dentro do body) -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1426646388899981&ev=PageView&noscript=1" /></noscript>
+
     <div id="root"></div>
     <!-- Importante: Esta linha faz o React ser compilado e carregado na Vercel -->
     <script type="module" src="/index.tsx"></script>
